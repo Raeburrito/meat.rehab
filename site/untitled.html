@@ -1,0 +1,48 @@
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+    $(".sheep").click(function(){
+        var hasLeftRelease = $('.A2').hasClass('left-release');
+        var hasRightRelease = $(".A3, .A4").hasClass("right-release");
+        var sheepHasRelease = $(".A1").hasClass("left-release");
+
+        $(".A1").removeClass("left-release");
+        $(".cow, .pig, .chicken").removeClass("circle-active");
+        $(".fact-box-pig, .title2, .fact-box-cow, .title").addClass("left-release");
+
+
+
+        if (sheepHasRelease) {
+            $(".fact-box-sheep").removeClass("right-release");
+            $(".title3").removeClass("right-release");
+            $(".nosheep").addClass("lamb");
+            $(".nosoya").addClass("soya");
+            $(".A3, .A4").addClass("right-release");
+            $(".A2").addClass("left-release");
+            $(".sheep").addClass("circle-active");
+
+        } 
+
+        else if (hasLeftRelease & hasRightRelease) {
+            $(".A2").removeClass("left-release");
+            $(".A3, .A4").removeClass("right-release");
+            $(".title3").addClass("right-release");
+            $(".fact-box-sheep").addClass("right-release");
+            $(".nosheep").removeClass("lamb");
+            $(".nosoya").removeClass("soya");
+
+
+        }
+
+        else {
+            $(".A3, .A4").addClass("right-release");
+            $(".A2").addClass("left-release"); 
+            $(".sheep").addClass("circle-active");
+            $(".fact-box-sheep").removeClass("right-release");
+            $(".title3").removeClass("right-release");
+            $(".nosheep").addClass("lamb");
+            $(".nosoya").addClass("soya");
+
+        }
+
+        </script>

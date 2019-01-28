@@ -1,0 +1,297 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+
+    $(".cow").click(function(){
+        var hasLeftRelease = $('.A1, .A2').hasClass('left-release');
+        var hasRightRelease = $(".A4").hasClass("right-release");
+        var cowHasRelease = $(".A3").hasClass("right-release");
+
+        $(".A3").removeClass("right-release");
+        $(".sheep, .pig, .chicken").removeClass("circle-active");
+        $(".fact-box-pig").addClass("left-release");
+        $(".fact-box-sheep, .fact-box-chicken").addClass("right-release");
+
+        if (cowHasRelease) {
+            $(".fact-box-cow").removeClass("left-release");
+            $(".nobeef").addClass("beef");
+            $(".nosoya").addClass("soya");
+            $(".A4").addClass("right-release");
+            $(".A1, .A2").addClass("left-release");
+            $(".cow").addClass("circle-active");
+        } 
+        else if (hasLeftRelease & hasRightRelease) {
+            $(".A1, .A2").removeClass("left-release");
+            $(".A4").removeClass("right-release");
+            $(".fact-box-cow").addClass("left-release");
+            $(".nobeef").removeClass("beef");
+            $(".nosoya").removeClass("soya");
+            $(".cow").removeClass("circle-active");
+        }
+        else {
+            $(".fact-box-cow").removeClass("left-release");
+            $(".nobeef").addClass("beef");
+            $(".nosoya").addClass("soya");
+            $(".A4").addClass("right-release");
+            $(".A1, .A2").addClass("left-release"); 
+            $(".cow").addClass("circle-active");
+
+        }
+
+    });
+
+    $(".sheep").click(function(){
+        var hasLeftRelease = $('.A2').hasClass('left-release');
+        var hasRightRelease = $(".A3, .A4").hasClass("right-release");
+        var sheepHasRelease = $(".A1").hasClass("left-release");
+
+        $(".A1").removeClass("left-release");
+        $(".cow, .pig, .chicken").removeClass("circle-active");
+        $(".fact-box-pig, .fact-box-cow").addClass("left-release");
+        $(".fact-box-chicken").addClass("right-release");
+
+
+
+        if (sheepHasRelease) {
+            $(".fact-box-sheep").removeClass("right-release");
+            $(".nosheep").addClass("lamb");
+            $(".nosoya").addClass("soya");
+            $(".A3, .A4").addClass("right-release");
+            $(".A2").addClass("left-release");
+            $(".sheep").addClass("circle-active");
+
+        } 
+
+        else if (hasLeftRelease & hasRightRelease) {
+            $(".A2").removeClass("left-release");
+            $(".A3, .A4").removeClass("right-release");
+            $(".fact-box-sheep").addClass("right-release");
+            $(".nosheep").removeClass("lamb");
+            $(".nosoya").removeClass("soya");
+            $(".sheep").removeClass("circle-active");
+        }
+
+        else {
+            $(".A3, .A4").addClass("right-release");
+            $(".A2").addClass("left-release"); 
+            $(".sheep").addClass("circle-active");
+            $(".fact-box-sheep").removeClass("right-release");
+            $(".nosheep").addClass("lamb");
+            $(".nosoya").addClass("soya");
+
+        }
+
+
+    });
+
+    $(".pig").click(function(){
+        var hasLeftRelease = $('.A1, .A2').hasClass('left-release');
+        var hasRightRelease = $(".A3").hasClass("right-release");
+        var pigHasRelease = $(".A4").hasClass("right-release");
+
+        $(".A4").removeClass("right-release");
+        $(".cow, .chicken, .sheep").removeClass("circle-active");
+        $(".fact-box-cow").addClass("left-release");
+        $(".fact-box-sheep, .fact-box-chicken").addClass("right-release");
+
+
+
+        if (pigHasRelease) {
+            $(".fact-box-pig").removeClass("left-release");
+            $(".nopork").addClass("pork");
+            $(".nosoya").addClass("soya");
+            $(".A3").addClass("right-release");
+            $(".A1, .A2").addClass("left-release");
+            $(".pig").addClass("circle-active");
+
+        } 
+
+        else if (hasLeftRelease & hasRightRelease) {
+            $(".fact-box-pig").addClass("left-release");
+            $(".nopork").removeClass("pork");
+            $(".nosoya").removeClass("soya");
+            $(".A1, .A2").removeClass("left-release");
+            $(".A3").removeClass("right-release");
+            $(".pig").removeClass("circle-active");
+
+        }
+
+        else {
+            $(".A3").addClass("right-release");
+            $(".A1, .A2").addClass("left-release"); 
+            $(".pig").addClass("circle-active");
+            $(".fact-box-pig").removeClass("left-release");
+            $(".nopork").addClass("pork");
+            $(".nosoya").addClass("soya");;
+        }
+    });
+
+    $(".chicken").click(function(){
+        var hasLeftRelease = $('.A1').hasClass('left-release');
+        var hasRightRelease = $(".A3, .A4").hasClass("right-release");
+        var chickenHasRelease = $(".A2").hasClass("left-release");
+        
+
+        $(".A2").removeClass("left-release");
+        $(".cow, .pig, .sheep").removeClass("circle-active");
+        $(".fact-box-pig, .fact-box-cow").addClass("left-release");
+        $(".fact-box-sheep").addClass("right-release");
+
+
+        if (chickenHasRelease) {
+            $(".A2").removeClass("remove-it");
+            $(".fact-box-chicken").removeClass("right-release");
+            $(".nochicken").addClass("friedchicken");
+            $(".nosoya").addClass("soya");
+            $(".A3, .A4").addClass("right-release");
+            $(".A1").addClass("left-release");
+            $(".chicken").addClass("circle-active");
+        } 
+
+        else if (hasLeftRelease & hasRightRelease) {
+            $(".A2").addClass("remove-it");
+            $(".A1").removeClass("left-release");
+            $(".A3, .A4").removeClass("right-release");
+            $(".chicken").removeClass("circle-active");
+            $(".fact-box-chicken").addClass("right-release");
+            $(".nochicken").removeClass("friedchicken");
+            $(".nosoya").removeClass("soya");
+        }
+
+        else {
+            $(".A2").removeClass("remove-it");
+            $(".A3, .A4").addClass("right-release");
+            $(".A1").addClass("left-release");
+            $(".chicken").addClass("circle-active");
+            $(".fact-box-chicken").removeClass("right-release");
+            $(".nochicken").addClass("friedchicken");
+            $(".nosoya").addClass("soya");
+        }
+    });
+});
+
+</script>
+
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        
+        <div id="wrapper"> 
+        <div class="line"></div> <div class="line"></div>
+
+        <div class="animal-holder A1"> <img src="images/sheep.png"> </div> 
+
+        <div class="animal-holder A2"> <img src="images/chicken.png"> </div> 
+
+        <div class="animal-holder A3"> <img src="images/cow.png"> </div> 
+
+        <div class="animal-holder A4"> <img src="images/pig.png"> </div>
+        <div class="circle-pink"> </div>
+
+
+        <!---   ................   COW  ................  -->
+
+
+        <div class="fact-box-cow left-release A3-fact">
+        <div class="title"></div>
+        <div class="half-box1"><div class="box-segment"><div class="bar-graph nobeef"></div></div><div class="box-segment"><div class="bar-graph nosoya"></div></div><div class="box-segment2">Per KG of Beef<h3>(Litres of water)</h3></div><div class="box-segment2">Per KG of Soya<h3>(Litres of water)</h3></div></div><div class="half-box2"><div class="box-segment-large">
+            <ul>
+                <li><img class="icon2" src="images/methane-icon2.png"><div class="text2">Cows produce 150 billion gallons of methane per day</div></li>
+                <li><img class="icon2" src="images/nature-icon2.png"><div class="text2">Each cow uses 2-5 acres of land</div></li>
+                <li><img class="icon2" src="images/poop-icon2.png"><div class="text2">A farm with 2,500 dairy cows produces the same amount of waste as a city of 411,000 people</div></li>
+                <li><img class="icon2" src="images/plant-icon2.png"><div class="text2">15x more protein on any given area of land with plants, rather than cows</div></li>
+            </ul>
+        </div></div></div>
+
+
+
+        <!---   ................   PIG  ................  -->
+
+
+        <div class="fact-box-pig left-release A3-fact">
+        <div class="title2"></div>
+        <div class="half-box1"><div class="box-segment"><div class="bar-graph nopork"></div></div><div class="box-segment"><div class="bar-graph nosoya"></div></div><div class="box-segment2">Per KG of Pork<h3>(Litres of water)</h3></div><div class="box-segment2">Per KG of Soya<h3>(Litres of water)</h3></div></div><div class="half-box2"><div class="box-segment-large">
+            <ul>
+                <li><img class="icon2" src="images/methane-icon2.png"><div class="text2">12.4 kg of CO2 is created per kg of pork consumed.</div></li>
+                <li><img class="icon2" src="images/drop-icon2.png"><div class="text2">In North Carolina 1999, a hurricane caused water contamination when a pig farm's waste pods overflowed, a $17 million research project to try and safely get rid of farming waste proved futile.</div></li>
+                <li><img class="icon2" src="images/poop-icon2.png"><div class="text2">According to a 2008 GAO estimate, hogs in five eastern North Carolina counties produced 15.5 million tons of manure in one year. To keep the lagoons from overflowing, farmers have been known to spray liquid manure containing bacteria on their fields nearby.</div></li>
+            </ul>
+        </div></div></div>
+
+
+            <!---   ................   SHEEP  ................  -->
+
+
+        <div class="fact-box-sheep right-release  A4-fact">
+        <div class="title3"></div>
+        <div class="half-box1"><div class="box-segment"><div class="bar-graph nosheep"></div></div><div class="box-segment"><div class="bar-graph nosoya"></div></div><div class="box-segment2">Per KG of Sheep<h3>(Litres of water)</h3></div><div class="box-segment2">Per KG of Soya<h3>(Litres of water)</h3></div></div><div class="half-box2"><div class="box-segment-large">
+            <ul>
+                <li><img class="icon2" src="images/steak-icon2.png"><div class="text2">New Zealand, the biggest exporter of lambs, can blame half of it's green house gas emissions on Animal Agriculture</div></li>
+                <li><img class="icon2" src="images/nature-icon2.png"><div class="text2">5 Sheep take up 4000m&sup2; of land which although can't be used for crops, could support a natural ecosystem instead</div></li>
+                <li><img class="icon2" src="images/methane-icon2.png"><div class="text2">Because 50% lamb is imported into the US, Lamb that is flown in creates 39.2 kg CO2 per KG of meat in addition to the 20-30 litres of methane a sheep produces per day</div></li>
+            </ul>
+        </div></div></div>
+
+
+
+          <!---   ................   CHICKEN  ................  -->
+
+
+
+      
+
+        <div class="fact-box-chicken right-release  A4-fact">
+        <div class="title4"></div>
+        <div class="half-box1"><div class="box-segment"><div class="bar-graph nochicken"></div></div><div class="box-segment"><div class="bar-graph nosoya"></div></div><div class="box-segment2">Per KG of Sheep<h3>(Litres of water)</h3></div><div class="box-segment2">Per KG of Soya<h3>(Litres of water)</h3></div></div><div class="half-box2"><div class="box-segment-large">
+            <ul>
+                <li><img class="icon2" src="images/methane-icon2.png"><div class="text2">For every 1kg of chicken consumed, approximately 7kg of CO2e is generated. That's double that of potatoes and 7x that of lentils</div></li>
+                <li><img class="icon2" src="images/light-bulb-icon2.png"><div class="text2">British people eat on average 25kg of chicken annually, that's 175kg of CO2e every year. That enough to power a 13-watt CF lightbulb for 561 days, continuously</div></li>
+                <li><img class="icon2" src="images/drop-icon2.png"><div class="text2">A typical slaughter plant kills over a quarter of a million chickens and uses 2 million gallons of water per day</div></li>
+            </ul>
+        </div></div></div>
+
+
+
+        
+
+
+<div class="head-box">
+
+    <h1>ANIMAL AGRICULTURE</h1>
+    <p>Click on an animal to find out the facts</p>
+
+
+    <div class="circle cow"><img src="images/cow-icon.png"></div>
+
+    <div class="circle sheep"><img src="images/sheep-icon.png"></div>
+
+
+    <div class="circle pig"><img src="images/pig-icon.png"></div>
+
+    <div class="circle chicken"><img src="images/chicken-icon.png"></div> 
+
+
+</div> 
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

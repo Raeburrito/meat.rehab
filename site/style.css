@@ -1,0 +1,887 @@
+
+
+
+
+@font-face {
+    font-family: "Metropolis-Medium";
+    src: url(fonts/Metropolis-Medium.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url(fonts/Metropolis-Regular.otf) format("opentype");
+}
+
+body {
+	font-family: "Metropolis";
+	color:#fff;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	line-height: 1.4em;
+}
+
+h1 {
+	font-family: "Metropolis-Medium";
+	letter-spacing: 0.3em;
+	line-height: 1.2em;
+	font-size: 1.8em;
+	color:#00FFBF;
+	margin: 0;
+}
+
+p {
+	margin: 10px 0px 15px 0px;
+}
+
+h3 {
+	font-size: 0.6em;
+}
+
+img {
+width: 100%;
+height: auto;
+}
+
+ul {
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,0.08);
+	padding: 10px 10px 20px 10px;
+}
+
+li:nth-of-type(1) {
+	border-top: 1px;
+	border-top-style: solid;
+	border-top-color: rgba(255,255,255,0.08);
+}
+
+
+.icon2 {
+	width: 30px;
+	height: auto;
+	display: inline-block;
+	padding: 15px 0px 20px 0px;
+	vertical-align: top;
+}
+.text2 {
+	height: auto;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 310px;
+}
+
+#wrapper {
+	margin: 0;
+	width: 100%;
+    height: 100vh;
+	background-color: #200737;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.head-box {
+	margin: 0;
+	position: absolute;
+	padding-top: 0px;
+	height: auto;
+	width: 100%;
+}
+
+
+.circle-pink {
+	margin-top: 10px;
+	width:10px;
+	height:10px;
+	background-color: rgba(214,130,252,1);
+	border-radius:100%;
+	display: inline-block;
+}
+
+
+.circle:hover  {
+	background-color: rgba(22, 82, 96, 1);
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	background-color: rgba(32,7,55,1);
+	border-width: 3px;
+	border-style: solid;
+	border-color: #00FFBF;
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0px 5px 0px 5px;
+	-webkit-transition: background-color 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.3s;
+}
+
+.circle-active {
+	background-color: rgba(55, 100, 120, 1);
+	border-width: 3px;
+	border-color: #FFF;
+	-webkit-transition: background-color 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.3s;
+}
+
+
+
+.circle img {
+	margin: 10px auto 0 auto;
+	width: 30px;
+	height: auto;
+	display: block;
+}
+
+#wrapper-2 {
+	margin:0;
+	width: 100%;
+	height: auto;
+	background-color: #333fff;
+}
+
+.animal-holder {
+	width: 440px;
+	height: auto;
+	position: absolute;
+}
+
+.A1, .A2 {
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.A3, .A4 {
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.A1 {
+	margin-top: 140px;
+	left: 60%;
+	width: 250px;
+	height:auto;
+}
+
+.A2 {
+	margin-top: 270px;
+	left: 74%;
+	width: 250px;
+	height:auto;
+
+}
+
+.A3 {
+	margin-top: 70px;
+	right: 60%;
+	width: 280px;
+	height: auto;
+
+}
+
+.A4 {
+	margin-top: 215px;
+	right: 63%;
+	width: 250px;
+	height: auto;
+}
+
+
+.A3-fact {
+	top: 240px;
+	left: 0%;
+}
+
+.A4-fact {
+	top: 240px;
+	right: 0%;
+}
+
+
+.title {
+	width: 150px;
+	height: 101px;
+	position: absolute;
+	right: 20px;
+	top: -30px;
+	background-image: url("images/cow-title-right.png");
+	background-size: 150px 101px;
+	background-repeat: no-repeat;
+}
+
+.title2 {
+	width: 126px;
+	height: 101px;
+	position: absolute;
+	right: 20px;
+	top: -30px;
+	background-image: url("images/pig-title-right.png");
+	background-size: 126px 101px;
+	background-repeat: no-repeat;
+}
+
+.title3 {
+	width: 175px;
+	height: 101px;
+	position: absolute;
+	left: 20px;
+	top: -30px;
+	background-image: url("images/sheep-title.png");
+	background-size: 175px 101px;
+	background-repeat: no-repeat;
+}
+
+.title4 {
+	width: 219px;
+	height: 90px;
+	position: absolute;
+	left: 20px;
+	top: -30px;
+	background-image: url("images/chicken-title.png");
+	background-size: 219px 90px;
+	background-repeat: no-repeat;
+}
+
+
+.left-release {
+	left: 120%;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.right-release {
+	right: 120%;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.fact-box-cow {
+	width: 100%;
+	position: absolute;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.fact-box-cow .half-box1 {
+	padding: 90px 0px 0px 0px;
+	}
+
+.fact-box-pig {
+	width: 100%;
+	position: absolute;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.fact-box-sheep {
+	width: 100%;
+	position: absolute;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.fact-box-chicken {
+	width: 100%;
+	position: absolute;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.half-box1 {
+	padding: 170px 0px 0px 0px;
+	width: 100%;
+}
+
+.half-box2 {
+	padding: 20px 0px 0px 0px;
+	width: 100%;
+}
+
+.box-segment, .box-segment2 {
+	width: 50%;
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+}
+
+.box-segment-large {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.box-segment2 {
+	padding: 10px 0px 0px 0px;
+}
+
+.bar-graph {
+	width: 30px;
+	height: 0px;
+	background-color: #00FFBF;
+	display: block;
+	margin: 0 auto 0 auto;
+	-webkit-transition: height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.8s;
+}
+
+.soya {
+	height: 25px;
+	-webkit-transition: height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.8s;
+}
+
+.beef {
+	height: 154px !important;
+	-webkit-transition: height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.8s;
+}
+
+.pork {
+	height: 60px !important;
+	-webkit-transition: height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.8s;
+}
+
+.lamb {
+	height: 104px !important;
+	-webkit-transition: height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.8s;
+}
+
+.friedchicken {
+	height: 43px !important;
+	-webkit-transition: height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.8s;
+}
+
+
+@media only screen and (max-width: 680px) and (min-width: 500px) {
+
+.A1 {
+	margin-top: 120px;
+	left: 68%;
+	width: 270px;
+	height:auto;
+}
+
+.A2 {
+	margin-top: 380px;
+	left: 78%;
+	width: 200px;
+	height:auto;
+
+}
+
+.A3 {
+	margin-top: 90px;
+	right: 70%;
+	width: 250px;
+	height: auto;
+
+}
+
+.A4 {
+	margin-top: 330px;
+	right: 76%;
+	width: 200px;
+	height: auto;
+}
+
+.left-release {
+	left: 120%;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.right-release {
+	right: 100%;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+
+
+}
+
+
+
+@media only screen and (max-width: 930px) and (min-width: 500px) {
+
+.half-box1 {
+	padding: 85px 0px 0px 0px !important;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 400px;
+}
+
+.fact-box-cow .half-box1 {
+	padding: 60px 0px 0px 0px !important;
+}
+
+.title {
+	width: 150px;
+	height: 101px;
+	position: absolute;
+	right: 100px;
+	top: -30px;
+	background-image: url("images/cow-title-right.png");
+	background-size: 150px 101px;
+	background-repeat: no-repeat;
+}
+
+.title2 {
+	position: absolute;
+	right: 100px;
+	top: -30px;
+	background-image: url("images/pig-title-right.png");
+	background-repeat: no-repeat;
+}
+
+.title3 {
+	left: 30%;
+	top: -60px;
+}
+
+.title4 {
+	left: 30%;
+	top: -60px;
+}
+
+.left-release {
+	left: 120%;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.right-release {
+	right: 120%;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+
+
+}
+
+
+@media only screen and (min-width: 680px) {
+
+.title {
+	right: 22%;
+	top: -60px;
+}
+
+.title2 {
+	right: 22%;
+}
+
+.circle {
+	width: 60px;
+	height: 60px;
+}
+
+.circle img {
+	width: 37px;
+	height: auto;
+}
+
+.A1 {
+	margin-top: 150px;
+	left: 65%;
+	width: 470px;
+	height:auto;
+}
+
+.A2 {
+	margin-top: 410px;
+	left: 72%;
+	width: 400px;
+	height:auto;
+
+}
+
+.A3 {
+	margin-top: 80px;
+	right: 68%;
+	width: 450px;
+	height:auto;
+
+}
+
+.A4 {
+	margin-top: 330px;
+	right: 74%;
+	width: 400px;
+	height:auto;
+}
+
+.left-release {
+	left: 120%;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.right-release {
+	right: 120%;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.icon2 {
+	width: 30px;
+	height: auto;
+	display: inline-block;
+	padding: 0px 20px 0px 20px;
+	vertical-align: top;
+}
+.text2 {
+	height: auto;
+	display: inline-block;
+	padding: 0;
+	max-width: 310px;
+}
+
+.fact-box-cow, .fact-box-sheep, .fact-box-chicken, .fact-box-pig {
+	text-align: left;
+}
+
+.half-box1 {
+	width: 35%;
+	max-width: 300px;
+}
+
+.half-box2 {
+	width: 380px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+li {
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,0.08);
+	padding: 20px 0px 20px 0px;
+}
+
+}
+
+
+@media only screen and (min-width: 930px) {
+
+
+.A1 {
+	margin-top: 150px;
+	left: auto;
+	right: -160px;
+	width: 470px;
+	height:auto;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+
+.A2 {
+	margin-top: 410px;
+	left: auto;
+	right: -140px;
+	width: 400px;
+	height:auto;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+
+.A3 {
+	margin-top: 80px;
+	left: -160px;
+	width: 450px;
+	height:auto;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.A4 {
+
+	margin-top: 330px;
+	left: -160px;
+	width: 400px;
+	height: auto;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+
+.A3-fact {
+	top: 280px;
+	left: auto;
+	right: 0px;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.A4-fact {
+	top: 220px;
+	left: 40px;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+
+}
+
+.title {
+	width: 180px;
+	height: 121px;
+	position: absolute;
+	left: 20px;
+	top: -80px;
+	background-image: url("images/cow-title.png");
+	background-size: 150px 101px;
+	background-repeat: no-repeat;
+}
+
+.title2 {
+	position: absolute;
+	left: 20px;
+	top: -80px;
+	background-image: url("images/pig-title.png");
+	background-repeat: no-repeat;
+}
+
+
+.fact-box-cow {
+	padding: 20px 0px 0px 0px;
+}
+
+.fact-box-pig {
+	padding: 20px 0px 0px 0px;
+}
+
+.fact-box-sheep {
+	padding: 20px 0px 0px 0px;
+}
+
+.fact-box-chicken {
+	padding: 20px 0px 0px 0px;
+}
+
+.head-box {
+	margin: 0;
+	position: absolute;
+	padding-top: 10px;
+	height: auto;
+	width: 100%;
+}
+
+.circle {
+	margin: 15px 10px 0px 10px;
+}
+
+.half-box1, .half-box2 {
+	height: auto;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.half-box1 {
+	width: 30%;
+}
+
+.half-box2 {
+	padding: 0px 0px 0px 30px;
+	width: 70%;
+	max-width: 400px;
+}
+
+
+.right-release {
+	left: -2000px;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.left-release {
+	left: auto;
+	right: -2000px;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+#wrapper {
+	margin: 0;
+	width: 100%;
+    height: 100vh;
+	background-color: #200737;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.line:nth-of-type(1) {
+	left:0;
+}
+
+.line:nth-of-type(2) {
+	right:0;
+}
+
+.line {
+	height:1px;
+	width:27%;
+	background-color: #00FFBF;
+	top: 165px;
+	position: absolute;
+}
+
+.text2 {
+	height: auto;
+	display: inline-block;
+	padding: 0;
+	max-width: 310px;
+}
+
+li {
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,0.08);
+}
+
+li:nth-of-type(1) {
+	border-top: 0px;
+}
+
+.fact-box-cow {
+	width: 680px;
+}
+
+.fact-box-pig {
+	width: 680px;
+}
+
+.fact-box-sheep {
+	width: 680px;
+}
+
+.fact-box-chicken {
+	width: 800px;
+}
+	}
+
+
+@media only screen and (min-width: 1200px) {
+
+.half-box1 {
+	width: 30%;
+}
+
+.half-box2 {
+	padding: 0px 0px 0px 30px;
+	width: 70%;
+	max-width: 500px;
+}
+
+.A3-fact {
+	top: 300px;
+	left: auto;
+	right: 60px;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.A4-fact {
+	top: 250px;
+	right: auto;
+	left: 60px;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.A1 {
+	margin-top: 150px;
+	left: auto;
+	right: -58px;
+	width: 470px;
+	height:auto;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+
+.A2 {
+	margin-top: 410px;
+	left: auto;
+	right: -50px;
+	width: 400px;
+	height:auto;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+
+.A3 {
+	margin-top: 80px;
+	left: -35px;
+	width: 450px;
+	height:auto;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.A4 {
+
+	margin-top: 330px;
+	left: -90px;
+	width: 400px;
+	height: auto;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.right-release {
+	left: -2000px;
+	-webkit-transition: left 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.8s;
+}
+
+.left-release {
+	right: -2000px;
+	-webkit-transition: right 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: right 0.8s;
+}
+
+.text2 {
+	max-width: 400px;
+}
+
+.fact-box-cow {
+	width: 830px;
+}
+
+.fact-box-pig {
+	width: 830px;
+}
+
+.fact-box-sheep {
+	width: 830px;
+}
+
+.fact-box-chicken {
+	width: 830px;
+}
+
+}
+
+
+
+
+
+
